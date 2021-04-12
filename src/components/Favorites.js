@@ -30,7 +30,12 @@ export default function Favorites({ data, handleDelete }) {
         disabled={data.length === 0}
         icon={<PlusCircleTwoTone />}
       ></Button>
-      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        width="80%"
+      >
         <Search
           className=".ant-input"
           enterButton="Search"

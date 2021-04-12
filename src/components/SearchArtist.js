@@ -22,12 +22,12 @@ export default function SearchArtist({ favorites, handleFavorite }) {
       )
         .then((response) => {
           setLoading(false);
-          let options = response.data.results;
-          console.log("qw", response.data.results);
-
+          const options = response.data.results;
           setOptions(options);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          setLoading(false);
+        });
     }
   }, [textToSearch]);
 
